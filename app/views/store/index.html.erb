@@ -1,0 +1,21 @@
+<% if notice %>
+<p id="notice"><%= notice %></p>
+<% end %>
+<h1>Stars for sale!!!</h1>
+<table>
+<% @products.each do |dupa| %>
+	<tr class="<%=cycle('odd', 'even')%>">
+		<td><%=(dupa.image_url==nil)?image_tag('noimage.jpg', class: 'list_image'):image_tag(dupa.image_url, class: 'list_image')%></td>
+		<td class="list_description">
+		<dl>
+			<dt><%= dupa.name %></dt>
+			<dd><%= sanitize(truncate(dupa.description, length: 80)) %></dd>
+		</dl>
+		</td>
+		<td><%=number_to_currency(dupa.price, unit: '€')%>
+			<%=button_to 'Add to Cart'%>
+		</td>
+
+	</tr>
+<%end%>
+</table>
