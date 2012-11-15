@@ -4,3 +4,469 @@ Connecting to database specified by database.yml
 Started GET "/assets/rails.png" for 127.0.0.1 at 2012-11-15 13:00:36 +0000
 Connecting to database specified by database.yml
 Served asset /rails.png - 200 OK (35ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.0ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (155.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (89.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (1.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateProducts (20121115172155)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (3.0ms)[0m  [1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "location" varchar(255), "price" decimal(8,2), "image_url" varchar(255), "user" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20121115172155')
+  [1m[36m (108.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("products")
+Connecting to database specified by database.yml
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (112.0ms)[0m  [1mINSERT INTO "products" ("created_at", "description", "image_url", "location", "name", "price", "updated_at", "user") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Thu, 15 Nov 2012 17:52:49 UTC +00:00], ["description", "AKA <b>Rigel Kent</b> is the brightest star in the southern constellation of Centaurus, it is currently inside the G-cloud."], ["image_url", nil], ["location", "Constellation: Centaurus"], ["name", "Alpha Centauri"], ["price", #<BigDecimal:42add60,'0.1E1',9(18)>], ["updated_at", Thu, 15 Nov 2012 17:52:49 UTC +00:00], ["user", nil]]
+  [1m[35m (104.0ms)[0m  commit transaction
+Connecting to database specified by database.yml
+  [1m[36m (1.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (64.0ms)[0m  [1mINSERT INTO "products" ("created_at", "description", "image_url", "location", "name", "price", "updated_at", "user") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Thu, 15 Nov 2012 17:56:53 UTC +00:00], ["description", "AKA <b>Rigel Kent</b> is the brightest star in the southern constellation of Centaurus, it is currently inside the G-cloud."], ["image_url", "http://server7.wikisky.org/?img_source=IMG_150:all&ra=14.659972&de=-60.83528&zoom=8&show_box=1&box_ra=14.659972&box_de=-60.83528&box_width=50&box_height=50"], ["location", "Constellation: Centaurus"], ["name", "Alpha Centauri"], ["price", #<BigDecimal:4286af0,'0.1E1',9(18)>], ["updated_at", Thu, 15 Nov 2012 17:56:53 UTC +00:00], ["user", nil]]
+  [1m[35m (268.0ms)[0m  commit transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (64.0ms)[0m  [1mINSERT INTO "products" ("created_at", "description", "image_url", "location", "name", "price", "updated_at", "user") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Thu, 15 Nov 2012 18:06:01 UTC +00:00], ["description", "AKA <b>Rigel Kent</b> is the brightest star in the southern constellation of Centaurus, it is currently inside the G-cloud."], ["image_url", "http://server7.wikisky.org/?img_source=IMG_150:all&ra=14.659972&de=-60.83528&zoom=8&show_box=1&box_ra=14.659972&box_de=-60.83528&box_width=50&box_height=50"], ["location", "Constellation: Centaurus"], ["name", "Alpha Centauri"], ["price", #<BigDecimal:41f9868,'0.1E1',9(18)>], ["updated_at", Thu, 15 Nov 2012 18:06:01 UTC +00:00], ["user", nil]]
+  [1m[35m (113.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO "products" ("created_at", "description", "image_url", "location", "name", "price", "updated_at", "user") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Thu, 15 Nov 2012 18:06:01 UTC +00:00], ["description", "Latin proxima, meaning \"next to\" or \"nearest to\")[12] is a red dwarf star about 4.24 light-years distant inside the G-cloud in the constellation of Centaurus"], ["image_url", "http://en.wikipedia.org/wiki/File:Proxima_Centauri_2MASS_Atlas.jpg"], ["location", "Constellation: Centaurus"], ["name", "Proxima Centauri"], ["price", #<BigDecimal:4212b10,'0.1E1',9(18)>], ["updated_at", Thu, 15 Nov 2012 18:06:01 UTC +00:00], ["user", nil]]
+  [1m[36m (106.0ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2012-11-15 18:09:45 +0000
+Served asset /rails.png - 304 Not Modified (0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2012-11-15 18:09:50 +0000
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (1.0ms)[0m  [1mSELECT "products".* FROM "products" [0m
+  Rendered products/index.html.erb within layouts/application (69.0ms)
+Compiled products.css  (57ms)  (pid 4916)
+Compiled scaffolds.css  (17ms)  (pid 4916)
+Compiled application.css  (174ms)  (pid 4916)
+Compiled jquery.js  (27ms)  (pid 4916)
+Compiled jquery_ujs.js  (0ms)  (pid 4916)
+Compiled products.js  (565ms)  (pid 4916)
+Compiled application.js  (845ms)  (pid 4916)
+Completed 200 OK in 1908ms (Views: 1611.0ms | ActiveRecord: 33.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-11-15 18:09:52 +0000
+Served asset /application.css - 200 OK (8ms)
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2012-11-15 18:09:52 +0000
+Served asset /products.css - 200 OK (3ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-11-15 18:09:52 +0000
+Served asset /scaffolds.css - 200 OK (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-15 18:09:52 +0000
+Served asset /jquery.js - 200 OK (65ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-15 18:09:52 +0000
+Served asset /jquery_ujs.js - 200 OK (9ms)
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2012-11-15 18:09:52 +0000
+Served asset /products.js - 200 OK (6ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-11-15 18:09:52 +0000
+Served asset /application.js - 200 OK (92ms)
+
+
+Started DELETE "/products/2" for 127.0.0.1 at 2012-11-15 18:10:27 +0000
+Processing by ProductsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"qVugac+K7VYHbWDRY/WpjoYLiGGgMflGDcuU6cNg4is=", "id"=>"2"}
+  [1m[35mProduct Load (1.0ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", "2"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (51.0ms)[0m  DELETE FROM "products" WHERE "products"."id" = ?  [["id", 2]]
+  [1m[36m (128.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/products
+Completed 302 Found in 204ms (ActiveRecord: 180.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2012-11-15 18:10:27 +0000
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (1.0ms)[0m  SELECT "products".* FROM "products" 
+  Rendered products/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 22ms (Views: 21.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-15 18:10:27 +0000
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started DELETE "/products/3" for 127.0.0.1 at 2012-11-15 18:10:36 +0000
+Processing by ProductsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"qVugac+K7VYHbWDRY/WpjoYLiGGgMflGDcuU6cNg4is=", "id"=>"3"}
+  [1m[36mProduct Load (0.0ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", "3"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 3]]
+  [1m[35m (113.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/products
+Completed 302 Found in 159ms (ActiveRecord: 115.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2012-11-15 18:10:36 +0000
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (1.0ms)[0m  [1mSELECT "products".* FROM "products" [0m
+  Rendered products/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 21ms (Views: 20.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-15 18:10:36 +0000
+Served asset /jquery.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+  [1m[36m (1.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (63.0ms)[0m  [1mINSERT INTO "products" ("created_at", "description", "image_url", "location", "name", "price", "updated_at", "user") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Thu, 15 Nov 2012 18:12:30 UTC +00:00], ["description", "AKA <b>Rigel Kent</b> is the brightest star in the southern constellation of Centaurus, it is currently inside the G-cloud."], ["image_url", nil], ["location", "Constellation: Centaurus"], ["name", "Alpha Centauri"], ["price", #<BigDecimal:42bd9f0,'0.1E1',9(18)>], ["updated_at", Thu, 15 Nov 2012 18:12:30 UTC +00:00], ["user", nil]]
+  [1m[35m (91.0ms)[0m  commit transaction
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (3.0ms)[0m  INSERT INTO "products" ("created_at", "description", "image_url", "location", "name", "price", "updated_at", "user") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Thu, 15 Nov 2012 18:12:30 UTC +00:00], ["description", "Latin proxima, meaning \"next to\" or \"nearest to\")[12] is a red dwarf star about 4.24 light-years distant inside the G-cloud in the constellation of Centaurus"], ["image_url", "http://en.wikipedia.org/wiki/File:Proxima_Centauri_2MASS_Atlas.jpg"], ["location", "Constellation: Centaurus"], ["name", "Proxima Centauri"], ["price", #<BigDecimal:42d6cc8,'0.1E1',9(18)>], ["updated_at", Thu, 15 Nov 2012 18:12:30 UTC +00:00], ["user", nil]]
+  [1m[36m (140.0ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/products" for 127.0.0.1 at 2012-11-15 18:12:45 +0000
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (1.0ms)[0m  SELECT "products".* FROM "products" 
+  Rendered products/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 23ms (Views: 21.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2012-11-15 18:12:45 +0000
+Served asset /products.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-15 18:12:45 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-11-15 18:12:45 +0000
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-11-15 18:12:46 +0000
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-15 18:12:46 +0000
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2012-11-15 18:12:46 +0000
+Served asset /products.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-11-15 18:12:46 +0000
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/products/1/edit" for 127.0.0.1 at 2012-11-15 18:12:52 +0000
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (1.0ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered products/_form.html.erb (82.0ms)
+  Rendered products/edit.html.erb within layouts/application (147.0ms)
+Completed 200 OK in 175ms (Views: 170.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2012-11-15 18:12:52 +0000
+Served asset /products.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-11-15 18:12:52 +0000
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-11-15 18:12:52 +0000
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-15 18:12:52 +0000
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-15 18:12:52 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2012-11-15 18:12:52 +0000
+Served asset /products.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-11-15 18:12:52 +0000
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started DELETE "/products/5" for 127.0.0.1 at 2012-11-15 18:13:03 +0000
+Processing by ProductsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"qVugac+K7VYHbWDRY/WpjoYLiGGgMflGDcuU6cNg4is=", "id"=>"5"}
+  [1m[35mProduct Load (0.0ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", "5"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  DELETE FROM "products" WHERE "products"."id" = ?  [["id", 5]]
+  [1m[36m (112.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/products
+Completed 302 Found in 119ms (ActiveRecord: 114.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2012-11-15 18:13:03 +0000
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.0ms)[0m  SELECT "products".* FROM "products" 
+  Rendered products/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 24ms (Views: 22.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-11-15 18:13:03 +0000
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-15 18:13:03 +0000
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2012-11-15 18:13:03 +0000
+Served asset /products.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2012-11-15 18:13:03 +0000
+Served asset /products.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-11-15 18:13:03 +0000
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-15 18:13:03 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-11-15 18:13:03 +0000
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2012-11-15 18:13:04 +0000
+Served asset /products.js - 304 Not Modified (0ms)
+
+
+Started DELETE "/products/6" for 127.0.0.1 at 2012-11-15 18:13:08 +0000
+Processing by ProductsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"qVugac+K7VYHbWDRY/WpjoYLiGGgMflGDcuU6cNg4is=", "id"=>"6"}
+  [1m[36mProduct Load (0.0ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", "6"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (5.0ms)[0m  [1mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 6]]
+  [1m[35m (194.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/products
+Completed 302 Found in 292ms (ActiveRecord: 199.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2012-11-15 18:13:09 +0000
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (1.0ms)[0m  [1mSELECT "products".* FROM "products" [0m
+  Rendered products/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 19ms (Views: 18.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-11-15 18:13:09 +0000
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2012-11-15 18:13:09 +0000
+Served asset /products.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-11-15 18:13:09 +0000
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-15 18:13:09 +0000
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-15 18:13:09 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2012-11-15 18:13:09 +0000
+Served asset /products.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-11-15 18:13:09 +0000
+Served asset /application.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+  [1m[36m (1.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (1.0ms)[0m  select sqlite_version(*)
+  [1m[36m (132.0ms)[0m  [1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "location" varchar(255), "price" decimal(8,2), "image_url" varchar(255), "user" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (122.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (183.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.0ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (116.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20121115172155')
+
+
+Started GET "/products" for 127.0.0.1 at 2012-11-15 18:43:50 +0000
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (1.0ms)[0m  SELECT "products".* FROM "products" 
+  Rendered products/index.html.erb within layouts/application (122.0ms)
+Completed 500 Internal Server Error in 153ms
+
+ActionView::Template::Error (undefined method `title' for #<Product:0x35e1e38>):
+    7: </td>
+    8: <td class="list_description">
+    9: <dl>
+    10: <dt><%= product.title %></dt>
+    11: <dd><%= truncate(strip_tags(product.description),
+    12: length: 80) %></dd>
+    13: </dl>
+  app/views/products/index.html.erb:10:in `block in _app_views_products_index_html_erb__719052347_26057472'
+  app/views/products/index.html.erb:3:in `each'
+  app/views/products/index.html.erb:3:in `_app_views_products_index_html_erb__719052347_26057472'
+  app/controllers/products_controller.rb:7:in `index'
+
+
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (118.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2012-11-15 18:44:19 +0000
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (1.0ms)[0m  [1mSELECT "products".* FROM "products" [0m
+  Rendered products/index.html.erb within layouts/application (384.0ms)
+Completed 200 OK in 442ms (Views: 437.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2012-11-15 18:44:19 +0000
+Served asset /products.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-11-15 18:44:19 +0000
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2012-11-15 18:44:19 +0000
+Served asset /products.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-15 18:44:19 +0000
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-15 18:44:19 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-11-15 18:44:19 +0000
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-11-15 18:44:19 +0000
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/" for 127.0.0.1 at 2012-11-15 18:44:20 +0000
+Served asset / - 404 Not Found (6ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  C:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/Ruby193/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/products/4" for 127.0.0.1 at 2012-11-15 18:45:20 +0000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mProduct Load (1.0ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", "4"]]
+  Rendered products/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 63ms (Views: 21.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-11-15 18:45:20 +0000
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2012-11-15 18:45:20 +0000
+Served asset /products.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-11-15 18:45:20 +0000
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-15 18:45:20 +0000
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-15 18:45:20 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2012-11-15 18:45:20 +0000
+Served asset /products.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-11-15 18:45:20 +0000
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2012-11-15 18:48:14 +0000
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (1.0ms)[0m  [1mSELECT "products".* FROM "products" [0m
+  Rendered products/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 37ms (Views: 33.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-11-15 18:48:14 +0000
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-11-15 18:48:14 +0000
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2012-11-15 18:48:14 +0000
+Served asset /products.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-15 18:48:14 +0000
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-15 18:48:14 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2012-11-15 18:48:14 +0000
+Served asset /products.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-11-15 18:48:14 +0000
+Served asset /application.js - 304 Not Modified (1ms)
