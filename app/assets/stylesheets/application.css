@@ -11,3 +11,33 @@
  *= require_self
  *= require_tree .
  */
+h1	{
+	padding:0.5em;
+	 color: #fff;
+}
+table{
+	 border-collapse: collapse;
+}
+#banner{
+		height: 10em;
+		background: url(http://en.es-static.us/upl/2009/06/Alpha_Centauri_-MSX_IPAC_NASA_cropped-300x214.jpg);
+}
+#banner img{
+			float: left;
+			width:150px;
+			height:100%;
+} 	
+#banner p{
+			float: left;
+			font-family: cursive;
+			font-size: 3em;
+			text-decoration: overline;
+			color: #fff;
+}
+#banner .field{
+				color: #fff;
+				float: right;
+}
+#menu li{
+	display: inline;
+}

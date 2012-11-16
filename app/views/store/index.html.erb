@@ -1,7 +1,7 @@
 <% if notice %>
 <p id="notice"><%= notice %></p>
 <% end %>
-<h1>Stars for sale!!!</h1>
+<% @page_title = "Be A Star!!!"%>
 <table>
 <% @products.each do |dupa| %>
 	<tr class="<%=cycle('odd', 'even')%>">
