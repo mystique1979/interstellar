@@ -38,6 +38,6 @@ table{
 				color: #fff;
 				float: right;
 }
-#menu li{
-	display: inline;
+#side li {
+		display: inline;
 }

@@ -13,7 +13,7 @@
 		</dl>
 		</td>
 		<td><%=number_to_currency(dupa.price, unit: '€')%>
-			<%=button_to 'Add to Cart'%>
+			<%= button_to 'Add to Cart', line_items_path(product_id: dupa) %>
 		</td>
 
 	</tr>
